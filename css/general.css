@@ -1,0 +1,108 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#contenedor{
+    margin-top: 50px;
+    width: 95%;
+    margin: auto;
+}
+
+#acciones{
+    text-align: right;
+}
+
+
+table{
+    margin: auto;
+    text-align: center;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+
+th{
+    border-bottom: 1px solid  rgb(103, 7, 148);
+    border-top: 1px solid  rgb(103, 7, 148);
+}
+
+td{
+    border-bottom: 1px solid rgba(103, 7, 148, 0.158);
+}
+
+th, td{
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+ tbody  tr:hover{
+    background-color: #9a97b410;
+  }
+
+  #btnAdd{
+      color: rgb(103, 7, 148);
+      text-decoration: none;
+      font-size: 20px;
+      padding: 9px;
+  }
+  #btnAdd:hover{
+    background-color: #9a97b410;
+  }
+
+  #btnDelete{
+    color:  rgb(103, 7, 148);
+    padding: 4px;
+  }
+  #btnDelete:hover{
+    color: rgb(255, 0, 0);
+  }
+
+  #btnEdit{
+    color:  rgb(103, 7, 148);
+    padding: 4px;
+  }
+
+  #btnEdit:hover{
+      color:rgb(0, 0, 255)
+  }
+
+  #btnInfo{
+    color:  rgb(103, 7, 148);
+    padding: 4px;
+  }
+
+  #btnInfo:hover{
+     color: rgb(6, 139, 99); 
+  }
+
+
+  #menu{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    width: 95%;
+  }
+
+  #inputBuscar{
+      border: none;
+      font-size: 20px;
+      width: 240px;
+  }
+
+  #iconSearch{
+      color: rgb(103, 7, 148);
+  }
+
+  h1{
+      font-weight: unset;
+      font-size: 25px;
+  }
+
+#contBuscar{
+    border-bottom: 2px solid rgba(103, 7, 148, 0.158);
+    width: 270px;
+}
