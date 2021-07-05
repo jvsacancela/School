@@ -1,0 +1,13 @@
+#tarjeta{
+    border:1px solid rgba(103, 7, 148, 0.158);
+    margin: 5px;
+   
+}
+#tarjeta:hover{
+    background-color: #9a97b410;
+}
+img{
+    border:1px solid red;
+    height: 100px;
+    width: 100px;
+}
