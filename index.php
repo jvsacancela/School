@@ -55,7 +55,7 @@
                         <td class="col"> <?php echo $f['PAR_CODIGO']; ?> </td>
                         <td class="col text-upercase"> <?php echo $f['PAR_NOMBRE']; ?> </td>
                         <td>
-                            <a href="edit.php?PAR_CODIGO=<?php echo $f['PAR_CODIGO']?>" class="btn btn-success">
+                            <a href="editar.php?PAR_CODIGO=<?php echo $f['PAR_CODIGO']?>" class="btn btn-success">
                                <i class="fas fa-marker"></i>
                             </a>
                             <a href="eliminar.php?PAR_CODIGO=<?php echo $f['PAR_CODIGO']?>" class="btn btn-danger">

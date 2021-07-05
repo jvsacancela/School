@@ -28,7 +28,17 @@
             return $resultado;
         }
         
+        # Funcion para Visualizar Paralelos Unico
+        public function ConsultaParaleloUnico($cod){
+            $resultado = $this->bd->query("SELECT * FROM snp_para WHERE PAR_CODIGO = $cod");
+            return $resultado;
+
+        }
         # Funcion para Actualizar Paralelos
+        public function ActualizarParalelo($cod, $codi, $name){
+            $resultado = $this->bd->query("UPDATE snp_para set PAR_CODIGO='$codi', PAR_NOMBRE='$name' WHERE PAR_CODIGO =$cod");
+            return true;
+        }
        
     }
 ?>
