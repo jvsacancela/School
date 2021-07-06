@@ -11246,9 +11246,7 @@ body {
   opacity: 0.6;
 }
 
-.dataTables-empty {
-  text-align: center;
-}
+
 
 .dataTable-top::after,
 .dataTable-bottom::after {

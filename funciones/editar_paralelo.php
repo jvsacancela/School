@@ -1,6 +1,6 @@
 <?php
-require_once 'config.php';
-require_once 'clase_sql.php';
+    require_once '../config/config.php';
+    require_once '../config/clase_sql.php';
 $clase_par = new Clase_sql();
 
 
@@ -17,7 +17,7 @@ if(isset($_POST['actualizar'])){
     $name=$_POST['nombre'];
     $result = $clase_par-> ActualizarParalelo($cod, $codi, $name);
     // header ('Location: consulta_cliente.php');
-  header ('Location: index.php');
+  header ('Location: ../page-paralelo.php');
 }
 
 ?>
@@ -31,7 +31,7 @@ if(isset($_POST['actualizar'])){
 <!--Ventana modal-->
 
 
-                    <form action="editar.php?PAR_CODIGO=<?php echo $_GET['PAR_CODIGO']; ?>" method="POST" class="needs-validation col-4 " novalidate>
+                    <form action="funciones/editar_paralelo.php?PAR_CODIGO=<?php echo $_GET['PAR_CODIGO']; ?>" method="POST" class="needs-validation col-4 " novalidate>
                         <div class="modal-body">
                             <div class="form-group row">
                                 <label for="codigo" class="col-md-3 col-form-label">Codigo</label>
