@@ -1,8 +1,10 @@
 #tarjeta{
     border:1px solid rgba(103, 7, 148, 0.158);
-    margin: 5px;
-   
+    margin: 8px;
+    padding: 5px
+
 }
+
 #tarjeta:hover{
     background-color: #9a97b410;
 }
@@ -11,3 +13,52 @@ img{
     height: 100px;
     width: 100px;
 }
+
+#bloque{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+}
+
+#contenido{
+    margin-top: 50px;
+    width: 95%;
+    margin: auto;
+}
+
+#btnEditar{
+    color: rgb(103, 7, 148);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 9px;
+    margin: auto;
+}
+
+#btnEditar:hover{
+    background-color: #9a97b410;
+    color: rgb(109, 6, 156);
+}
+
+#subtarjeta{
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+#input{
+    border: none;
+    font-size: 18px;
+    width: 350px;
+    border-bottom: 1px solid rgba(103, 7, 148, 0.158);
+    width: 270px;
+    background-color: transparent;
+}
+
+label{
+    font-size: 18px;
+    width: 100%;
+}
+
+#subtarjeta1{
+    display: grid;
+    grid-template-columns: 75% 25%;
+  }
