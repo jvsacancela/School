@@ -39,6 +39,10 @@
             $resultado = $this->bd->query("UPDATE snp_para set PAR_CODIGO='$codi', PAR_NOMBRE='$name' WHERE PAR_CODIGO =$cod");
             return true;
         }
+
+        public function ConsultarAlumnos(){
+            
+        }
        
     }
 ?>
