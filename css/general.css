@@ -51,6 +51,7 @@ th, td{
   }
   #btnAdd:hover{
     background-color: #9a97b410;
+    color: rgb(109, 6, 156);
   }
 
   #btnDelete{
