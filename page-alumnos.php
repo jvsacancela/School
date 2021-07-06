@@ -1,3 +1,10 @@
+<?php 
+    require_once "config/config.php";
+    require_once "config/clase_sql.php";
+     $consulta = new Clase_sql();
+     $consulta_alumnos = $consulta-> ConsultarAlumnos();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +33,6 @@
         <table>
             <thead>
                 <th></th>
-                <th>Foto</th>
                 <th>Código</th>
                 <th>Matricula</th>
                 <th>Folio</th>
@@ -34,49 +40,32 @@
                 <th>Número</th>
                 <th>Apellidos</th>
                 <th>Nombre</th>
-                <th>Ret.</th>
-                <th>Paga %</th>
-                <th>Representante</th>
+                <th>Nacionalidad</th>
+                <th>Telefono</th>
+                <th>Colegio anterior</th>
             </thead>
             <tbody>
+                <?php while($display = $consulta_alumnos->fetch_assoc()){ ?>
                 <tr>
                     <td>
                         <a href=""><i class="fas fa-info" id="btnInfo"></i></a>
                         <a href=""><i class="fas fa-edit" id="btnEdit"></i></a>
                         <a href=""><i class="fas fa-trash" id="btnDelete"></i></a>
                     </td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
+                    <td><?php echo $display['ALU_NMATRI'] ?></td>
+                    <td><?php echo $display['ALU_MATRIC'] ?></td>
+                    <td><?php echo $display['ALU_NFOLIO'] ?></td>
+                    <td><?php echo $display['ALU_CEDULA'] ?></td>
+                    <td><?php echo $display['ALU_NLISTA'] ?></td>
+                    <td><?php echo $display['ALU_APELLI'] ?></td>
+                    <td><?php echo $display['ALU_NOMBRE'] ?></td>
+                    <td><?php echo $display['ALU_NACION'] ?></td>
+                    <td><?php echo $display['ALU_TELEDO'] ?></td>
+                    <td><?php echo $display['ALU_COLEVI'] ?></td>
                 </tr>
-
-                <tr>
-                    <td>
-                        <a href=""><i class="fas fa-info" id="btnInfo"></i></a>
-                        <a href=""><i class="fas fa-edit" id="btnEdit"></i></a>
-                        <a href=""><i class="fas fa-trash" id="btnDelete"></i></a>
-                    </td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                    <td>abc</td>
-                   
-                </tr>
+                    
+                <?php } ?>
+                
             </tbody>
 
             
