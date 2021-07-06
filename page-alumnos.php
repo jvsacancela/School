@@ -39,6 +39,7 @@
                 <th>Representante</th>
             </thead>
             <tbody>
+                <?php while($display) ?>
                 <tr>
                     <td>
                         <a href=""><i class="fas fa-info" id="btnInfo"></i></a>

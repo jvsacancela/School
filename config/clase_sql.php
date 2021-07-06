@@ -40,5 +40,9 @@
             return true;
         }
        
+        public function ConsultarAlumnos(){
+            $resultado = $this->bd->query("SELECT * FROM snp_alum");
+            return $resultado;
+        }
     }
 ?>

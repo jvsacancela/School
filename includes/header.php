@@ -72,7 +72,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseestudiantes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">aqui escribir paginas</a>
+                                            <a class="nav-link" href="page-alumnos.php">Alumnos</a>
                                             <a class="nav-link" href="404.html">aqui escribir paginas</a>
                                             <a class="nav-link" href="500.html">aqui escribir paginas</a>
                                         </nav>
