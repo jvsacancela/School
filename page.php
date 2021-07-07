@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>PAGE</h1>
+    <h1>PAGE 2</h1>
 </body>
 </html>
