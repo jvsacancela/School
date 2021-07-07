@@ -39,10 +39,22 @@
             $resultado = $this->bd->query("UPDATE snp_para set PAR_CODIGO='$codi', PAR_NOMBRE='$name' WHERE PAR_CODIGO =$cod");
             return true;
         }
-       
-        public function ConsultarAlumnos(){
+
+        # Funcion para Concultar Alumnos 
+        public function ConsultaAlumnos(){
             $resultado = $this->bd->query("SELECT * FROM snp_alum");
             return $resultado;
         }
+
+        # Funcion para consultar materia
+         public function ConsultaMateriasGeneral(){
+             $resultado = $this->bd->query("SELECT * FROM snp_mate");
+             return $resultado;
+         }
+        #Funcion para insertar materia
+         public function InsertarMateria($codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
+             $resultado = $this-> bd ->query("INSERT INTO snp_mate(MAT_CODIGO, MAT_CODCUR, MAT_NOMBRE, MAT_CODPER, MAT_GRADO, MAT_TIPO, MAT_ORDEN, MAT_RESALT, MAT_OBPRMA, MAT_COCOMA, MAT_NUMACO, MAT_OCULTA, MAT_AREID, MAT_AREAC, MAT_AMBITO) VALUES('$codm','$codcurm','$nombm','$codperm','$gram','$tipm','$ordenm','$resaltm','$obprmam','$cocomam','$numacom','$oculm','$areidm','$areacm','$ambm')");
+             return true;
+         }
     }
 ?>
