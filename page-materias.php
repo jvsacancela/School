@@ -30,20 +30,21 @@
                 <table class="table table-hover"id="dtcli2"> 
                     <thead class="thead-dark grey">
                         <tr class="row">
-                        <th class="col">AMBITO</th>
-                        <th class="col">AREA ACADEMICA</th>
-                        <th class="col">AREA ID</th>
-                        <th class="col">CODIGO MATERIA</th>
+                        <th class="col">CODIGO </th>
                         <th class="col">CODIGO CURSO</th>
+                        <th class="col">NOMBRE</th>
                         <th class="col">CODIGO PERSONAL</th>
                         <th class="col">GRADO</th>
-                        <th class="col">NOMBRE</th>
-                        <th class="col">NUMACO</th>
-                        <th class="col">OBPMRA</th>
-                        <th class="col">OCULTAR</th>
-                        <th class="col">ORDENAR</th>
-                        <th class="col">RESALTAR</th>
                         <th class="col">TIPO</th>
+                        <th class="col">ORDEN</th>
+                        <th class="col">RESALTAR</th>
+                        <th class="col">OBPMRA</th>
+                        <th class="col">COCOMA</th>
+                        <th class="col">NUMACO</th>
+                        <th class="col">OCULTAR</th>
+                        <th class="col">AREA ID</th>
+                        <th class="col">AREA ACADEMICA</th>
+                        <th class="col">AMBITO</th>
                     </tr>
                     </thead>
                     
@@ -51,20 +52,22 @@
                         <!---Ciclo While para agregar datos de la clase_sql en una Variable $f --> 
                         <?php while($f = $consulta_materia->fetch_assoc()){ ?>
                     <tr class="row">
+                         <td class="col"> <?php echo $f['MAT_CODIGO']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_CODCUR']; ?> </td>
+                         <td class="col text-upercase"> <?php echo $f['MAT_NOMBRE']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_CODPER']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_GRADO']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_TIPO']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_ORDEN']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_RESALT']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_OBPRMA']; ?> </td>
+                         <td class="col text-upercase"> <?php echo $f['MAT_COCOMA']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_NUMACO']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_OCULTA']; ?> </td>
+                         <td class="col"> <?php echo $f['MAT_AREID']; ?> </td>
+                         <td class="col text-upercase"> <?php echo $f['MAT_AREAC']; ?> </td>
                         <td class="col"> <?php echo $f['MAT_AMBITO']; ?> </td>
-                        <td class="col text-upercase"> <?php echo $f['MAT_AREAC']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_AREID']; ?> </td>
-                        <td class="col text-upercase"> <?php echo $f['MAT_COCOMA']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_CODIGO']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_CODPER']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_GRADO']; ?> </td>
-                        <td class="col text-upercase"> <?php echo $f['MAT_NOMBRE']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_NUMACO']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_OBPRMA']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_OCULTA']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_ORDEN']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_RESALT']; ?> </td>
-                        <td class="col"> <?php echo $f['MAT_TIPO']; ?> </td>
+                        
                         <td class="col">
                           <a href="funciones/editar_materias.php?MAT_CODIGO=<?php echo $f['MAT_CODIGO']?>" class="btn btn-success">
                                <i class="fas fa-marker"></i>
@@ -97,32 +100,11 @@
                 </div>
                 <form action="funciones/insertar_materias.php" method="POST" class="needs-validation" novalidate>
                     <div class="modal-body">
-                            <div class="form-group row">
-                                <label for="ambito" class="col-md-3 col-form-label">Ambito</label>
+                       <div class="form-group row">
+                                <label for="codigo" class="col-md-3 col-form-label">Codigo Materia</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="ambito" id="ambito" class="form-control" required>
-                                    <div class="invalid-feedback">Ingrese un ambito</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="area_academica" class="col-md-3 col-form-label">Area Academica</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="area_academica" id="area_academica" class="form-control" required>
-                                    <div class="invalid-feedback">Area Academica</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="area_id" class="col-md-3 col-form-label">Area Ide</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="area_id" id="area_id" class="form-control" required>
-                                    <div class="invalid-feedback">Area Id </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="codigo_materia" class="col-md-3 col-form-label">Codigo Materia</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="codigo_materia" id="codigo_materia" class="form-control" required>
-                                    <div class="invalid-feedback">Codigo Materia</div>
+                                    <input type="text" name="codigo" id="codigo" class="form-control" required>
+                                    <div class="invalid-feedback">Codigo </div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -130,6 +112,13 @@
                                 <div class="col-sm-9">
                                     <input type="text" name="codigo_curso" id="codigo_curso" class="form-control" required>
                                     <div class="invalid-feedback">Codigo Curso</div>
+                                </div>
+                                </div>
+                                <div class="form-group row">
+                                <label for="nombre" class="col-md-3 col-form-label">Nombre</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="nombre" id="nombre" class="form-control" required>
+                                    <div class="invalid-feedback">Ingrese un Nombre</div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -142,50 +131,8 @@
                             <div class="form-group row">
                                 <label for="grado" class="col-md-3 col-form-label">Grado</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="grado" id="grado" class="form-control" required>
+                                    <input type="text" name="grado" id="grado" class="form-control" >
                                     <div class="invalid-feedback">Ingrese Grado</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="nombre" class="col-md-3 col-form-label">Nombre</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="nombre" id="nombre" class="form-control" required>
-                                    <div class="invalid-feedback">Ingrese un Nombre</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="numaco" class="col-md-3 col-form-label">Numaco</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="numaco" id="numaco" class="form-control" required>
-                                    <div class="invalid-feedback">Ingrese Numaco</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="obpmra" class="col-md-3 col-form-label">Obpmra</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="obpmra" id="obpmra" class="form-control" required>
-                                    <div class="invalid-feedback">Ingrese un Obpmra</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="ocultar" class="col-md-3 col-form-label">ocultar</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="ocultar" id="ocultar" class="form-control" required>
-                                    <div class="invalid-feedback">Ocultar</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="ordenar" class="col-md-3 col-form-label">ordenar</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="ordenar" id="ordenar" class="form-control" required>
-                                    <div class="invalid-feedback">Ordenar</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="resaltar" class="col-md-3 col-form-label">Resaltar</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="resaltar" id="resaltar" class="form-control" required>
-                                    <div class="invalid-feedback">Resaltar</div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -196,14 +143,72 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="orden" class="col-md-3 col-form-label">orden</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="orden" id="orden" class="form-control" required>
+                                    <div class="invalid-feedback">Orden</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="resaltar" class="col-md-3 col-form-label">Resaltar</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="resaltar" id="resaltar" class="form-control">
+                                    <div class="invalid-feedback">Resaltar</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="obpmra" class="col-md-3 col-form-label">Obpmra</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="obpmra" id="obpmra" class="form-control" >
+                                    <div class="invalid-feedback">Ingrese un Obpmra</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="cocoma" class="col-md-3 col-form-label">cocoma</label>
                                 <div class="col-sm-9">
                                     <input type="text" name="cocoma" id="cocoma" class="form-control" required>
                                     <div class="invalid-feedback">cocoma</div>
                                 </div>
                             </div>
-
-                    </div>
+                            <div class="form-group row">
+                                <label for="numaco" class="col-md-3 col-form-label">Numaco</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="numaco" id="numaco" class="form-control" required>
+                                    <div class="invalid-feedback">Ingrese Numaco</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="ocultar" class="col-md-3 col-form-label">ocultar</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="ocultar" id="ocultar" class="form-control">
+                                    <div class="invalid-feedback">Ocultar</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="area_id" class="col-md-3 col-form-label">Area Ide</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="area_id" id="area_id" class="form-control" required>
+                                    <div class="invalid-feedback">Area Id </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="area_academica" class="col-md-3 col-form-label">Area Academica</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="area_academica" id="area_academica" class="form-control" required>
+                                    <div class="invalid-feedback">Area Academica</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ambito" class="col-md-3 col-form-label">Ambito</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="ambito" id="ambito" class="form-control" required>
+                                    <div class="invalid-feedback">Ingrese un ambito</div>
+                                </div>
+                            </div> 
+                        </div> 
+                    
+                 
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-outline-dark col-12">Enviar</button>
                     </div>
