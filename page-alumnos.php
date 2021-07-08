@@ -2,7 +2,7 @@
     require_once "config/config.php";
     require_once "config/clase_sql.php";
      $consulta = new Clase_sql();
-     $consulta_alumnos = $consulta-> ConsultarAlumnos();
+     $consulta_alumnos = $consulta-> ConsultaAlumnos();
 ?>
 
 <!DOCTYPE html>
