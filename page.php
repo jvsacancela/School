@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>PAGE</h1>
-    <h1>Palabras
-    </h1>
+    <
 </body>
 </html>
