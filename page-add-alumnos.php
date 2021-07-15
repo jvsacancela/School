@@ -12,14 +12,26 @@
 <body>
     <div id="contenido">
 
-    <form action="">
+    <form action="funciones/insertar_alumnos.php" method="POST">
+
+    <div>
+    <input type="text" name="input_codigo" placeholder="codigo">
+    <input type="text" name="input_matricula" placeholder="matricula">
+    <input type="text" name="input_folio" placeholder="folio">
+    <input type="text" name="input_cedula" placeholder="cedula">
+    <input type="text" name="input_numero" placeholder="numero">
+    <input type="text" name="input_apellido" placeholder="apellidos">
+    <input type="text" name="input_nombre" placeholder="nombres">
+    <input type="text" name="input_nacionalidad" placeholder="nacionalidad">
+    <input type="text" name="input_telefono" placeholder="telefono">
+    <input type="text" name="input_colAnt" placeholder="colegio anterior">
+    </div>
         <div id="bloque">
             <div id="tarjeta">
 
             <div id="subtarjeta">
                 <h1>Datos del alumno</h1>
             </div>    
-                <p>deadede</p>
                 <h1>dedewdew</h1>
                 <p>deadewwefrwf</p>
               
@@ -28,9 +40,18 @@
             <div id="tarjeta">
             <div id="subtarjeta">
                 <h1>Identificacion</h1>
+                <div id=subtarjeta1>
+                <div>
+                
+                </div>
+                
+                </div>
+                
             </div>
                 <img src="" alt="foto de perfil">
-                <p>Javier Vicente Sacancela Macas<p>
+                <br>
+                <label for="">Numero de matricula: </label>
+                <input type="text" value="" id="input">
             </div>
         </div>
         
@@ -115,9 +136,8 @@
                         </div>
 
                         <div>
-                            <label for="">Nuevo</label>
-                            
                             <input type="checkbox" name="" id="" value="si">
+                            <label for="">Nuevo</label>
                         </div>
                     </div>
                 </div>
@@ -159,6 +179,8 @@
                 <h1>Observación</h1>
             </div>
         </div>
+
+        <input type="submit" value="Guardar">
 
     </form>    
     </div>
