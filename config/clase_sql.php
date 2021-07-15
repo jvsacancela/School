@@ -82,6 +82,34 @@
         public function ActualizarMateria($cod,$codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
             $resultado = $this->bd->query("UPDATE snp_mate set MAT_CODIGO='$codm', MAT_CODCUR='$codcurm', MAT_NOMBRE='$nombm', MAT_CODPER='$codperm', MAT_GRADO='$gram', MAT_TIPO='$tipm', MAT_TIPO='$tipm', MAT_ORDEN='$ordem', MAT_RESALT='$resaltm', MAT_OBPRMA='$obprmam', MAT_COCOMA='$cocomam', MAT_NUMACO='$numacom', MAT_OCULTA='$oculm', MAT_AREID='$areidm', MAT_AREAC='$areacm',MAT_AMBITO='$ambm' WHERE MAT_CODIGO=$cod");
             return true;
+
         }
+        #Funcion para consultar ciclo
+        public function ConsultarCiclo(){
+            $resultado = $this->bd ->query("SELECT * FROM snp_cicl");
+            return $resultado;
+        }
+        #Funcion para insertar ciclo
+        public function InsertarCiclo($cod, $nom){
+            $resultado = $this->bd->query("INSERT INTO  snp_cicl (CIC_CODI, CIC_NOMB) VALUES ('$cod', '$nom')");
+            return true;
+        }
+        #Funcion para eliminar ciclo
+        public function EliminarCiclo($cod){
+            $resultado = $this->bd->query("DELETE FROM snp_cicl WHERE CIC_CODI = $cod");
+            return $resultado;
+        }
+        #Funcion para editar ciclo
+        public function ConsultaCicloUnico($cod){
+            $resultado = $this->bd->query("SELECT * FROM snp_cicl WHERE CIC_CODI = $cod");
+            return $resultado;
+
+        }
+        # Funcion para actualizar ciclo
+        public function ActualizarCiclo($cod, $codi, $name){
+            $resultado = $this->bd->query("UPDATE snp_cicl set CIC_CODI='$codi', CIC_NOMB='$name' WHERE CIC_CODI =$cod");
+            return true;
+        }
+
     }
 ?>
