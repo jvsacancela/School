@@ -40,10 +40,22 @@
             return true;
         }
 
-        # Funcion para Concultar Alumnos 
+        # Funcion para Consultar Alumnos 
         public function ConsultaAlumnos(){
             $resultado = $this->bd->query("SELECT * FROM snp_alum");
             return $resultado;
+        }
+
+        #Funcion para Insertar Alumnos
+        public function InsertarAlumnos($a_codigo, $a_matricula, $a_folio, $a_cedula, $a_numero, $a_apellido, $a_nombre, $a_nacionalidad, $a_telefono, $a_colAnt){
+            $resultado = $this->bd->query("INSERT INTO snp_alum(ALU_NMATRI, ALU_MATRIC, ALU_NFOLIO, ALU_CEDULA, ALU_NLISTA, ALU_APELLI, ALU_NOMBRE, ALU_NACION, ALU_TELEDO, ALU_COLEVI) VALUES ('$a_codigo', '$a_matricula', '$a_folio', '$a_cedula', '$a_numero', '$a_apellido', '$a_nombre', '$a_nacionalidad', '$a_telefono', '$a_colAnt')");
+            return true;
+        }
+
+        #Funcion para Eliminar Alumnos
+        public function EliminarAlumno($id){
+            $resultado = $this->bd->query("DELETE FROM snp_alum WHERE ALU_NMATRI = '$id'");
+            return true;
         }
 
         # Funcion para consultar materia
@@ -62,13 +74,14 @@
             return $resultado;
         }
         #Funcion para consultar Materia unico
-        public fuction ConsultaMateriaUnico($cod){
+        public function ConsultaMateriaUnico($cod){
             $resultado = $this->bd->query("SELECT * FROM snp_mate  WHERE MAT_CODIGO = $cod");
             return $resultado;
         }
         #Funcion para Editar Materia
-        public fuction ActualizarMateria($cod,$codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
+        public function ActualizarMateria($cod,$codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
             $resultado = $this->bd->query("UPDATE snp_mate set MAT_CODIGO='$codm', MAT_CODCUR='$codcurm', MAT_NOMBRE='$nombm', MAT_CODPER='$codperm', MAT_GRADO='$gram', MAT_TIPO='$tipm', MAT_TIPO='$tipm', MAT_ORDEN='$ordem', MAT_RESALT='$resaltm', MAT_OBPRMA='$obprmam', MAT_COCOMA='$cocomam', MAT_NUMACO='$numacom', MAT_OCULTA='$oculm', MAT_AREID='$areidm', MAT_AREAC='$areacm',MAT_AMBITO='$ambm' WHERE MAT_CODIGO=$cod");
             return true;
+        }
     }
 ?>

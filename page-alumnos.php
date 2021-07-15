@@ -25,7 +25,7 @@
                 <input type="text" id="inputBuscar" placeholder="Buscar">
             </div>
             <div id="acciones">
-                <a href="" id="btnAdd">Nuevo <i class="fas fa-user-plus"></i></a>
+                <a href="page-add-alumnos.php" id="btnAdd">Nuevo <i class="fas fa-user-plus"></i></a>
             </div>
         </div>
            
@@ -50,7 +50,7 @@
                     <td>
                         <a href=""><i class="fas fa-info" id="btnInfo"></i></a>
                         <a href=""><i class="fas fa-edit" id="btnEdit"></i></a>
-                        <a href=""><i class="fas fa-trash" id="btnDelete"></i></a>
+                        <a href="funciones/eliminar_alumnos.php?ALU_NMATRI="><i class="fas fa-trash" id="btnDelete"></i></a>
                     </td>
                     <td><?php echo $display['ALU_NMATRI'] ?></td>
                     <td><?php echo $display['ALU_MATRIC'] ?></td>
