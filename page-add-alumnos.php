@@ -59,7 +59,7 @@
             <h2>Datos adicionales</h2>
                         <div>
                             <label for="">Fecha de matricula: </label>
-                            <input type="text" value="" id="input">
+                            <input type="date" value="" id="input">
                         </div>
 
                         <div>
@@ -129,7 +129,7 @@
 
                         <div>
                             <label for="">Fecha de naciemiento: </label>
-                            <input type="text" id="input">
+                            <input type="date" id="input">
                         </div>
 
                         <div>
