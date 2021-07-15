@@ -8,5 +8,5 @@
 
     $delete_alumno = $delete-> EliminarAlumno($id);
 
-    //header('Location: ../page-alumnos.php')
+    header('Location: ../page-alumnos.php')
 ?>
