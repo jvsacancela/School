@@ -18,6 +18,7 @@
 <body>
     <div id="contenedor">
        <h1>Alumnos</h1>
+       
         <div id="menu">
            
             <div id="contBuscar">
@@ -28,8 +29,36 @@
                 <a href="page-add-alumnos.php" id="btnAdd">Nuevo <i class="fas fa-user-plus"></i></a>
             </div>
         </div>
-           
-        
+        <br>
+        <hr>
+        <br>
+        <div id="filtros">
+            <div>
+                <label for="">Año: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Sección: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Paralelo: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Educación: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Especialidad: </label>
+                <input type="text" id="input">
+            </div>
+       </div>
+        <br>
         <table>
             <thead>
                 <th></th>
