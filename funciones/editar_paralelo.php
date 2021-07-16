@@ -31,7 +31,7 @@ if(isset($_POST['actualizar'])){
 <!--Ventana modal-->
 
 
-                    <form action="funciones/editar_paralelo.php?PAR_CODIGO=<?php echo $_GET['PAR_CODIGO']; ?>" method="POST" class="needs-validation col-4 " novalidate>
+                    <form action="editar_paralelo.php?PAR_CODIGO=<?php echo $_GET['PAR_CODIGO']; ?>" method="POST" class="needs-validation col-4 " novalidate>
                         <div class="modal-body">
                             <div class="form-group row">
                                 <label for="codigo" class="col-md-3 col-form-label">Codigo</label>
