@@ -4,9 +4,10 @@
 
     $insertar = new Clase_sql();
 
-    $alum_codigo = $_POST['input_codigo'];
-    $alum_mtricula = $_POST['input_matricula'];
+    $alum_fech_matric = $_POST['input_fec_mat'];
     $alum_folio = $_POST['input_folio'];
+    $alum_tipo = $_POST['input_tipo'];
+    
     $alum_cedula = $_POST['input_cedula'];
     $alum_numero = $_POST['input_numero'];
     $alum_apellido = $_POST['input_apellido'];

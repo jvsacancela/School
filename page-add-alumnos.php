@@ -1,3 +1,10 @@
+<?php 
+    require_once "config/config.php";
+    require_once "config/clase_sql.php";
+     $consulta = new Clase_sql();
+     $consulta_paralelo = $consulta-> ConsultaParaleloGeneral();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +53,7 @@
                 <img src="https://scontent.fuio14-1.fna.fbcdn.net/v/t1.18169-9/10924825_1571291193085412_3652568559445422628_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=174925&_nc_eui2=AeGrHcAqU6Q5Kw70UEAb8q2IWJgq6EbIyNNYmCroRsjI0_OCccEAFoflIF6cXtFN7ukY_8cF1mztmPoHwJ6LUYoY&_nc_ohc=FPicfjSBCGEAX-keZ6P&_nc_oc=AQnlcykaoZAdJ71t_DiCd5Vf5w5YYD9a7mttgFXIoGs1cWC9l-9qLT9sAh0fRygeFuI&_nc_ht=scontent.fuio14-1.fna&oh=918208b52fb8720549b8d46e168562ca&oe=60F5C0BD" alt="foto de perfil">
                 <br>
                 <label for="">Numero de matricula: </label>
-                <input type="text" name="input_codigo" id="input">
+                <input type="text" name="" id="input">
             </div>
         </div>
         
@@ -59,42 +66,65 @@
             <h2>Datos adicionales</h2>
                         <div>
                             <label for="">Fecha de matricula: </label>
-                            <input type="date" value="" id="input">
+                            <input type="date" value="" id="input" name="input_fec_mat">
                         </div>
 
                         <div>
                             <label for="">Folio: </label>
                             <input type="text" name="input_folio" id="input">
                         </div>
-                        
-                        <input type="radio" name="" id="" value="Soltero">
-                        <label for="Soltero">Normal</label><br>
 
-                        <input type="radio" name="" id="" value="Casado">
-                        <label for="Casado">Condicional</label><br>
+                        <select name="input_tipo" id="input">
+                            <option value="Normal">Normal</option>
+                            <option value="Condicional">Condicional</option>
+                        </select>
 
                         <div>
                             <label for="">Año: </label>
-                            <input type="text" id="input">
+                            <select name="aaa" id="input">
+                                <option value="Primero">Primero</option>
+                                <option value="Segundo">Segundo</option>
+                                <option value="Tercero">Tercero</option>
+                            </select>
                         </div>
 
                         <div>
                             <label for="">Educación: </label>
-                            <input type="text" id="input">
+                            <select name="education" id="input">
+                                <option value="Basica">Basica</option>
+                                <option value="Bachillerato">Bachillerato</option>
+                                <option value="Elemental">Elemental</option>
+                            </select>
                         </div>
 
                         <div>
                             <label for="">Sección: </label>
-                            <input type="text" id="input">
+                            <select name="seccion" id="input">
+                                <option value="Matutina">Matutina</option>
+                                <option value="Vespertina">Vespertina</option>
+                                <option value="Nocturna">Nocturna</option>
+                            </select>
                         </div>
 
                         <div>
                             <label for="">Especialidad: </label>
-                            <input type="text" id="input">
+                            <select name="especialidad" id="input">
+                                <option value="Ninguno">-- Ninguno --</option>
+                                <option value="Informatica">Informatica</option>
+                                <option value="Contabilidad">Contabilidad</option>
+                                <option value="General">General</option>
+                            </select>
                         </div>
 
                         <div>
                             <label for="">Paralelo: </label>
+                            <select name="paralelo" id="input">
+                            <?php while($display = $consulta_paralelo->fetch_assoc()){?>
+                                <option value="<?php echo $display['PAR_CODIGO'] ?>">
+                                <?php echo $display['PAR_NOMBRE'] ?>
+                                </option>
+                            <?php } ?>
+                            </select>
                             <input type="text" id="input">
                         </div>
             </div>
@@ -152,35 +182,32 @@
                         <div>
                             <h2>Estado civil</h2>
 
-                            <input type="radio" name="" id="" value="Soltero">
-                            <label for="Soltero">Soltero</label><br>
+                            <select name="" id="">
+                                <option value="Soltero">Soltero</option>
+                                <option value="Casado">Casado</option>
+                                <option value="Divorciado">Divorciado</option>
+                                <option value="Union libre">Union libre</option>
+                                <option value="Viudo">Viudo</option>
+                            </select>
 
-                            <input type="radio" name="" id="" value="Casado">
-                            <label for="Casado">Casado</label><br>
-
-                            <input type="radio" name="" id="" value="Divorciado">
-                            <label for="Divorciado">Divorciado</label><br>
-
-                            <input type="radio" name="" id="" value="Union-libre">
-                            <label for="Union-libre">Union libre</label><br>
-
-                            <input type="radio" name="" id="" value="Viudo">
-                            <label for="Viudo">Viudo</label><br>
                         </div>
                     
                         <div>
                             <h2>Sexo</h2>
 
-                            <input type="radio" name="" id="" value="Masculino">
-                            <label for="Masculino">Masculino</label><br>
-
-                            <input type="radio" name="" id="" value="Femenino">
-                            <label for="Femenino">Femenino</label><br>
+                            <select name="" id="">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                
                         </div>
                             <br>
                         <div>
-                            <input type="checkbox" name="" id="" value="si">
-                            <label for="">Nuevo</label>
+                            <label for="">¿Nuevo?</label>
+                            <select name="" id="">
+                                <option value="No">No</option>
+                                <option value="Si">Si</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -336,25 +363,12 @@
 
                 <h2>Condicionantes</h2>
 
-                    <div>
-                        <input type="checkbox" name="" id="" value="si">
-                        <label for="">Aprovechamiento</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="" id="" value="si">
-                        <label for="">Disciplina</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="" id="" value="si">
-                        <label for="">Pension</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" name="" id="" value="si">
-                        <label for="">Becado</label>
-                    </div>
+                <select name="" id="input">
+                    <option value="Aprovechamiento">Aprovechamiento</option>
+                    <option value="Disciplina">Disciplina</option>
+                    <option value="Pension">Pension</option>
+                    <option value="Becado">Becado</option>
+                </select>
 
                     <h2>Observacion</h2>
 
