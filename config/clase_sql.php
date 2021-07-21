@@ -62,13 +62,14 @@
             return $resultado;
         }
         #Funcion para consultar Materia unico
-        public fuction ConsultaMateriaUnico($cod){
+        public function ConsultaMateriaUnico($cod){
             $resultado = $this->bd->query("SELECT * FROM snp_mate  WHERE MAT_CODIGO = $cod");
             return $resultado;
         }
         #Funcion para Editar Materia
-        public fuction ActualizarMateria($cod,$codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
+        public function ActualizarMateria($cod,$codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
             $resultado = $this->bd->query("UPDATE snp_mate set MAT_CODIGO='$codm', MAT_CODCUR='$codcurm', MAT_NOMBRE='$nombm', MAT_CODPER='$codperm', MAT_GRADO='$gram', MAT_TIPO='$tipm', MAT_TIPO='$tipm', MAT_ORDEN='$ordem', MAT_RESALT='$resaltm', MAT_OBPRMA='$obprmam', MAT_COCOMA='$cocomam', MAT_NUMACO='$numacom', MAT_OCULTA='$oculm', MAT_AREID='$areidm', MAT_AREAC='$areacm',MAT_AMBITO='$ambm' WHERE MAT_CODIGO=$cod");
             return true;
+        }
     }
 ?>

@@ -7,6 +7,8 @@
     $clase_par = new Clase_sql();
 
     $result_par = $clase_par-> ConsultaParaleloGeneral();
+ 
+
 ?>
 <?php include("includes/header.php") ?>
 
@@ -43,15 +45,16 @@
                         <td class="col"> <?php echo $f['PAR_CODIGO']; ?> </td>
                         <td class="col text-upercase"> <?php echo $f['PAR_NOMBRE']; ?> </td>
                         <td class="col">
-                          <a href="funciones/editar_paralelo.php?PAR_CODIGO=<?php echo $f['PAR_CODIGO']?>" class="btn btn-success">
+                            <a href="funciones/editar_paralelo.php?PAR_CODIGO=<?php echo $f['PAR_CODIGO']?>" class="btn btn-success">
+                          
                                <i class="fas fa-marker"></i>
                             </a>
                             <a href="funciones/eliminar_paralelo.php?PAR_CODIGO=<?php echo $f['PAR_CODIGO']?>" class="btn btn-danger">
                             <i class="fas fa-trash-alt"></i>
                             </a>
-                        </td>
-                       
+                        </td>                    
                     </tr>
+                    
                         <?php }?>
                 </tbody>
 
@@ -62,7 +65,7 @@
 
     </div>
 
-    <!--Ventana modal-->
+    <!--Ventana modal insertar-->
     <div class="modal fade" id="modal1">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -98,6 +101,7 @@
 
         </div>
     </div>
+
 
     <?php include("includes/footer.php") ?>
 
