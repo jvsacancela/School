@@ -6,7 +6,6 @@
       margin-top: 50px;
       width: 95%;
       margin: auto;
-      border: 1px solid orange;
   }
 
   #acciones{
@@ -107,4 +106,9 @@
   #contBuscar{
       border-bottom: 1px solid rgba(103, 7, 148, 0.158);
       width: 270px;
+  }
+
+  #filtros{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
   }

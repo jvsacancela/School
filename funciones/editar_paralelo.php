@@ -20,6 +20,7 @@ if(isset($_POST['actualizar'])){
   header ('Location: ../page-paralelo.php');
 }
 ?>
+<<<<<<< HEAD
 <!--Ventana modal editar-->
 <div class="modal fade" id="modal3">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -31,6 +32,19 @@ if(isset($_POST['actualizar'])){
                     </button>
                 </div>
                 <form action="editar_paralelo.php?PAR_CODIGO=<?php echo $_GET['PAR_CODIGO']; ?>" method="POST" class="needs-validation col-4 " novalidate>
+=======
+<head>
+    <title>Paralelos</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+</head>
+<!--Ventana modal-->
+
+
+                    <form action="editar_paralelo.php?PAR_CODIGO=<?php echo $_GET['PAR_CODIGO']; ?>" method="POST" class="needs-validation col-4 " novalidate>
+>>>>>>> 4c71f14f921fae4addb8622f3f841f59088a8f78
                         <div class="modal-body">
                             <div class="form-group row">
                                 <label for="codigo1" class="col-md-3 col-form-label">Codigo</label>

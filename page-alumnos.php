@@ -18,6 +18,7 @@
 <body>
     <div id="contenedor">
        <h1>Alumnos</h1>
+       
         <div id="menu">
            
             <div id="contBuscar">
@@ -25,15 +26,42 @@
                 <input type="text" id="inputBuscar" placeholder="Buscar">
             </div>
             <div id="acciones">
-                <a href="" id="btnAdd">Nuevo <i class="fas fa-user-plus"></i></a>
+                <a href="page-add-alumnos.php" id="btnAdd">Nuevo <i class="fas fa-user-plus"></i></a>
             </div>
         </div>
-           
-        
+        <br>
+        <hr>
+        <br>
+        <div id="filtros">
+            <div>
+                <label for="">Año: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Sección: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Paralelo: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Educación: </label>
+                <input type="text" id="input">
+            </div>
+
+            <div>
+                <label for="">Especialidad: </label>
+                <input type="text" id="input">
+            </div>
+       </div>
+        <br>
         <table>
             <thead>
                 <th></th>
-                <th>Código</th>
                 <th>Matricula</th>
                 <th>Folio</th>
                 <th>Cédula</th>
@@ -41,8 +69,8 @@
                 <th>Apellidos</th>
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
-                <th>Telefono</th>
-                <th>Colegio anterior</th>
+                <th>Sexo</th>
+                <th>Representante</th>
             </thead>
             <tbody>
                 <?php while($display = $consulta_alumnos->fetch_assoc()){ ?>
@@ -50,18 +78,17 @@
                     <td>
                         <a href=""><i class="fas fa-info" id="btnInfo"></i></a>
                         <a href=""><i class="fas fa-edit" id="btnEdit"></i></a>
-                        <a href=""><i class="fas fa-trash" id="btnDelete"></i></a>
+                        <a href="funciones/eliminar_alumnos.php?ALU_NMATRI=<?php echo $display['ALU_NMATRI']?>"><i class="fas fa-trash" id="btnDelete"></i></a>
                     </td>
-                    <td><?php echo $display['ALU_NMATRI'] ?></td>
-                    <td><?php echo $display['ALU_MATRIC'] ?></td>
-                    <td><?php echo $display['ALU_NFOLIO'] ?></td>
-                    <td><?php echo $display['ALU_CEDULA'] ?></td>
-                    <td><?php echo $display['ALU_NLISTA'] ?></td>
-                    <td><?php echo $display['ALU_APELLI'] ?></td>
-                    <td><?php echo $display['ALU_NOMBRE'] ?></td>
-                    <td><?php echo $display['ALU_NACION'] ?></td>
-                    <td><?php echo $display['ALU_TELEDO'] ?></td>
-                    <td><?php echo $display['ALU_COLEVI'] ?></td>
+                    <td><?php echo $display['alum_codigo'] ?></td>
+                    <td><?php echo $display['alum_folio'] ?></td>
+                    <td><?php echo $display['alum_cedula'] ?></td>
+                    <td><?php echo $display['alum_telefono'] ?></td>
+                    <td><?php echo $display['alum_apellido'] ?></td>
+                    <td><?php echo $display['alum_nombre'] ?></td>
+                    <td><?php echo $display['alum_nacionalidad'] ?></td>
+                    <td><?php echo $display['alum_sexo'] ?></td>
+                    <td><?php echo $display['alum_repre_nombre'] ?></td>
                 </tr>
                     
                 <?php } ?>

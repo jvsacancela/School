@@ -32,18 +32,30 @@
         public function ConsultaParaleloUnico($cod){
             $resultado = $this->bd->query("SELECT * FROM snp_para WHERE PAR_CODIGO = $cod");
             return $resultado;
-
         }
+        
         # Funcion para Actualizar Paralelos
         public function ActualizarParalelo($cod, $codi, $name){
             $resultado = $this->bd->query("UPDATE snp_para set PAR_CODIGO='$codi', PAR_NOMBRE='$name' WHERE PAR_CODIGO =$cod");
             return true;
         }
 
-        # Funcion para Concultar Alumnos 
+        # Funcion para Consultar Alumnos 
         public function ConsultaAlumnos(){
-            $resultado = $this->bd->query("SELECT * FROM snp_alum");
+            $resultado = $this->bd->query("SELECT * FROM snp_alumnos");
             return $resultado;
+        }
+
+        #Funcion para Insertar Alumnos
+        public function InsertarAlumnos($a_codigo, $a_matricula, $a_folio, $a_cedula, $a_numero, $a_apellido, $a_nombre, $a_nacionalidad, $a_telefono, $a_colAnt){
+            $resultado = $this->bd->query("INSERT INTO snp_alum(ALU_NMATRI, ALU_MATRIC, ALU_NFOLIO, ALU_CEDULA, ALU_NLISTA, ALU_APELLI, ALU_NOMBRE, ALU_NACION, ALU_TELEDO, ALU_COLEVI) VALUES ('$a_codigo', '$a_matricula', '$a_folio', '$a_cedula', '$a_numero', '$a_apellido', '$a_nombre', '$a_nacionalidad', '$a_telefono', '$a_colAnt')");
+            return true;
+        }
+
+        #Funcion para Eliminar Alumnos
+        public function EliminarAlumno($id){
+            $resultado = $this->bd->query("DELETE FROM snp_alum WHERE ALU_NMATRI = '$id'");
+            return true;
         }
 
         # Funcion para consultar materia
@@ -70,6 +82,38 @@
         public function ActualizarMateria($cod,$codm,$codcurm,$nombm,$codperm,$gram,$tipm,$ordenm,$resaltm,$obprmam,$cocomam,$numacom,$oculm,$areidm,$areacm,$ambm){
             $resultado = $this->bd->query("UPDATE snp_mate set MAT_CODIGO='$codm', MAT_CODCUR='$codcurm', MAT_NOMBRE='$nombm', MAT_CODPER='$codperm', MAT_GRADO='$gram', MAT_TIPO='$tipm', MAT_TIPO='$tipm', MAT_ORDEN='$ordem', MAT_RESALT='$resaltm', MAT_OBPRMA='$obprmam', MAT_COCOMA='$cocomam', MAT_NUMACO='$numacom', MAT_OCULTA='$oculm', MAT_AREID='$areidm', MAT_AREAC='$areacm',MAT_AMBITO='$ambm' WHERE MAT_CODIGO=$cod");
             return true;
+<<<<<<< HEAD
         }
+=======
+
+        }
+        #Funcion para consultar ciclo
+        public function ConsultarCiclo(){
+            $resultado = $this->bd ->query("SELECT * FROM snp_cicl");
+            return $resultado;
+        }
+        #Funcion para insertar ciclo
+        public function InsertarCiclo($cod, $nom){
+            $resultado = $this->bd->query("INSERT INTO  snp_cicl (CIC_CODI, CIC_NOMB) VALUES ('$cod', '$nom')");
+            return true;
+        }
+        #Funcion para eliminar ciclo
+        public function EliminarCiclo($cod){
+            $resultado = $this->bd->query("DELETE FROM snp_cicl WHERE CIC_CODI = $cod");
+            return $resultado;
+        }
+        #Funcion para editar ciclo
+        public function ConsultaCicloUnico($cod){
+            $resultado = $this->bd->query("SELECT * FROM snp_cicl WHERE CIC_CODI = $cod");
+            return $resultado;
+
+        }
+        # Funcion para actualizar ciclo
+        public function ActualizarCiclo($cod, $codi, $name){
+            $resultado = $this->bd->query("UPDATE snp_cicl set CIC_CODI='$codi', CIC_NOMB='$name' WHERE CIC_CODI =$cod");
+            return true;
+        }
+
+>>>>>>> 4c71f14f921fae4addb8622f3f841f59088a8f78
     }
 ?>
