@@ -96,8 +96,8 @@
             return $resultado;
         }
         #Funcion para insertar ciclo
-        public function InsertarCiclo($cod, $nom){
-            $resultado = $this->bd->query("INSERT INTO  snp_cicl (CIC_CODI, CIC_NOMB) VALUES ('$cod', '$nom')");
+        public function InsertarCiclo($nom){
+            $resultado = $this->bd->query("INSERT INTO  snp_cicl (CIC_NOMB) VALUES ('$nom')");
             return true;
         }
         #Funcion para eliminar ciclo
