@@ -46,6 +46,12 @@
             return $resultado;
         }
 
+        #Funcion Consultar ID Alumno
+        public function ConsultaAlumnoID($id){
+            $resultado = $this->bd->query("SELECT * FROM snp_alumnos WHERE alum_codigo = '$id'");
+            return $resultado;
+        }
+
         #Funcion para Insertar Alumnos
         public function InsertarAlumnos($alum_fech_matric,  $alum_folio,  $alum_tipo, $alum_aaa,  $alum_educacion,  $alum_seccion, $alum_especialidad, $alum_paralelo, $alum_apellido, $alum_nombre, $alum_cedula, $alum_lug_nac,  $alum_fech_nac,  $alum_domicilio,  $alum_telefono,  $alum_civil,  $alum_sex,  $alum_new,  $padre_nombre,  $padre_nacionalidad, $padre_direccion, $padre_profesion, $padre_cedula,  $padre_telefono, $padre_trabajo, $padre_lug_tra, $madre_nombre,  $madre_nacionalidad, $madre_direccion, $madre_profesion, $madre_cedula,  $madre_telefono, $madre_trabajo, $madre_lug_tra, $cliente_nombre, $repre_nombre, $parentesco, $alum_colAnt, $direcc, $i_aaa, $i_tipo, $ii_aa, $repite, $condicionantes, $observacion){
             $resultado = $this->bd->query("INSERT INTO snp_alumnos(alum_codigo, alum_fech_matr, alum_folio, alum_tipo_matr, alum_ao, alum_educacion, alum_seccion, alum_especialidad, alum_paralelo, alum_apellido, alum_nombre, alum_cedula, alum_lug_nac, alum_fech_nac, alum_nacionalidad, alum_domicilio, alum_telefono, alum_civil, alum_sexo, alum_nuevo, alum_padre_nombre, alum_padre_nacionalidad, alum_padre_direccion, alum_padre_profesion, alum_padre_cedula, alum_padre_telefono, alum_padre_lug_trab, alum_madre_nombre, alum_madre_nacionalidaad, alum_madre_direccion, alum_madre_profesion, alum_madre_cedula, alum_madre_telefono, alum_madre_trabajo, alum_madre_lug_trab, alum_cliente_nombre, alum_repre_nombre, alum_repre_parentesco, alum_colant_nombre, alum_colant_direccion, alum_colant_tipo, alum_colant_ao, alum_rep_ao, alum_condicionantes, alum_observacion) VALUES ('$alum_fech_matric',  '$alum_folio',  '$alum_tipo', '$alum_aaa',  '$alum_educacion',  '$alum_seccion', '$alum_especialidad', '$alum_paralelo', '$alum_apellido', '$alum_nombre', '$alum_cedula', '$alum_lug_nac',  '$alum_fech_nac',  '$alum_domicilio',  '$alum_telefono',  '$alum_civil',  '$alum_sex',  '$alum_new',  '$padre_nombre',  '$padre_nacionalidad', '$padre_direccion', '$padre_profesion', '$padre_cedula',  '$padre_telefono', '$padre_trabajo', '$padre_lug_tra', '$madre_nombre',  '$madre_nacionalidad', '$madre_direccion', '$madre_profesion', '$madre_cedula',  '$madre_telefono', '$madre_trabajo', '$madre_lug_tra', '$cliente_nombre', '$repre_nombre', '$parentesco', '$alum_colAnt', '$direcc', '$i_aaa', '$i_tipo', '$ii_aa', '$repite', '$condicionantes', '$observacion')");
@@ -60,7 +66,7 @@
 
         #Funcion para Eliminar Alumnos
         public function EliminarAlumno($id){
-            $resultado = $this->bd->query("DELETE FROM snp_alum WHERE ALU_NMATRI = '$id'");
+            $resultado = $this->bd->query("DELETE FROM snp_alumnos WHERE alum_codigo = '$id'");
             return true;
         }
 
