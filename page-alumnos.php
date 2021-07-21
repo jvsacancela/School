@@ -77,8 +77,8 @@
                 <tr>
                     <td>
                         <a href=""><i class="fas fa-info" id="btnInfo"></i></a>
-                        <a href=""><i class="fas fa-edit" id="btnEdit"></i></a>
-                        <a href="funciones/eliminar_alumnos.php?ALU_NMATRI=<?php echo $display['ALU_NMATRI']?>"><i class="fas fa-trash" id="btnDelete"></i></a>
+                        <a href="page-edit-alumnos.php?alum_codigo=<?php echo $display['alum_codigo']?>"><i class="fas fa-edit" id="btnEdit"></i></a>
+                        <a href="funciones/eliminar_alumnos.php?alum_codigo=<?php echo $display['alum_codigo']?>"><i class="fas fa-trash" id="btnDelete"></i></a>
                     </td>
                     <td><?php echo $display['alum_codigo'] ?></td>
                     <td><?php echo $display['alum_folio'] ?></td>
