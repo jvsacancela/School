@@ -2,7 +2,7 @@
         require_once '../config/config.php';
         require_once '../config/clase_sql.php';
 
-    $insertar = new Clase_sql();
+    $update = new Clase_sql();
 
     $alum_fech_matric = $_POST['input_fec_mat'];
     $alum_folio = $_POST['input_folio'];
@@ -51,7 +51,7 @@
     $observacion = $_POST['observacion'];
 
 
-    $insertar_alumnos = $insertar-> InsertarAlumnos($alum_fech_matric,  $alum_folio,  $alum_tipo, $alum_aaa,  $alum_educacion,  $alum_seccion, $alum_especialidad, $alum_paralelo, $alum_apellido, $alum_nombre, $alum_cedula, $alum_lug_nac,  $alum_fech_nac,  $alum_domicilio,  $alum_telefono,  $alum_civil,  $alum_sex,  $alum_new,  $padre_nombre,  $padre_nacionalidad, $padre_direccion, $padre_profesion, $padre_cedula,  $padre_telefono, $padre_trabajo, $padre_lug_tra, $madre_nombre,  $madre_nacionalidad, $madre_direccion, $madre_profesion, $madre_cedula,  $madre_telefono, $madre_trabajo, $madre_lug_tra, $cliente_nombre, $repre_nombre, $parentesco, $alum_colAnt, $direcc, $i_aaa, $i_tipo, $ii_aa, $repite, $condicionantes, $observacion);
+    $insertar_alumnos = $insertar-> UpdateAlumnos($alum_fech_matric,  $alum_folio,  $alum_tipo, $alum_aaa,  $alum_educacion,  $alum_seccion, $alum_especialidad, $alum_paralelo, $alum_apellido, $alum_nombre, $alum_cedula, $alum_lug_nac,  $alum_fech_nac,  $alum_domicilio,  $alum_telefono,  $alum_civil,  $alum_sex,  $alum_new,  $padre_nombre,  $padre_nacionalidad, $padre_direccion, $padre_profesion, $padre_cedula,  $padre_telefono, $padre_trabajo, $padre_lug_tra, $madre_nombre,  $madre_nacionalidad, $madre_direccion, $madre_profesion, $madre_cedula,  $madre_telefono, $madre_trabajo, $madre_lug_tra, $cliente_nombre, $repre_nombre, $parentesco, $alum_colAnt, $direcc, $i_aaa, $i_tipo, $ii_aa, $repite, $condicionantes, $observacion);
   header ('Location: ../page-alumnos.php');
 
 ?>
