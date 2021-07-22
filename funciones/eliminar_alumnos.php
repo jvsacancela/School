@@ -4,7 +4,7 @@
     
     $delete = new Clase_sql();
 
-    $id = $_GET['ALU_NMATRI'];
+    $id = $_GET['alum_codigo'];
 
     $delete_alumno = $delete-> EliminarAlumno($id);
 
