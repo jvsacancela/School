@@ -77,14 +77,7 @@
                 </div>
                 <form action="funciones/insertar_paralelo.php" method="POST" class="needs-validation" novalidate>
                     <div class="modal-body">
-                            <div class="form-group row">
-                                <label for="codigo" class="col-md-3 col-form-label">Codigo</label>
-                                <div class="col-sm-9">
-                                    <input type="text" name="codigo" id="codigo" class="form-control" required>
-                                    <div class="invalid-feedback">Ingrese un codigo</div>
-                                </div>
-                            </div>
-
+                           
                             <div class="form-group row">
                                 <label for="nombre" class="col-md-3 col-form-label">Nombre</label>
                                 <div class="col-sm-9">

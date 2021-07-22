@@ -74,7 +74,7 @@
                                     <a class="nav-link" href="#">Educacion</a>
                                     <a class="nav-link" href="#">Secciones</a>
                                     <a class="nav-link" href="#">Especialidades</a>
-                                    <a class="nav-link" href="#">Paralelos</a>
+                                    <a class="nav-link" href="page-paralelo.php">Paralelos</a>
                                     <a class="nav-link" href="#">Personal</a>
                                     <a class="nav-link" href="#">Formar Año</a>
                                     <a class="nav-link" href="#">Materias</a>
@@ -84,7 +84,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsematri" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-edit"></i></div>
                                 Matriculas
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -96,7 +96,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapserepre" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-id-card-alt"></i></div>
                                 Representantes
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -108,7 +108,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsenotas" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="far fa-edit"></i></div>
                                 Notas
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -120,7 +120,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsecolet" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-pen-fancy"></i></div>
                                 Colecturia
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -131,7 +131,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseinsp" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-tie"></i></div>
                                 Inspeccion
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -142,7 +142,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsedob" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-th-large"></i></div>
                                 DOBE
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -153,7 +153,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsecont" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
                                 Contraseñas
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -191,9 +191,9 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.html">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                            <a class="nav-link" href="login.php">Login</a>
+                                            <a class="nav-link" href="register.php">Register</a>
+                                            <a class="nav-link" href="password.php">Forgot Password</a>
                                         </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">

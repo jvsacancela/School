@@ -18,8 +18,8 @@
             return $resultado;
         }
         # Funcion para Insertar paralelo
-        public function InsertarParalelo($cod, $nom){
-            $resultado = $this->bd->query("INSERT INTO  snp_para (PAR_CODIGO, PAR_NOMBRE) VALUES ('$cod', '$nom')");
+        public function InsertarParalelo($nom){
+            $resultado = $this->bd->query("INSERT INTO  snp_para ( PAR_NOMBRE) VALUES ('$nom')");
             return true;
             }
         # Funcion para eliminar Paralelos
@@ -35,7 +35,7 @@
         }
         
         # Funcion para Actualizar Paralelos
-        public function ActualizarParalelo($cod, $codi, $name){
+        public function ActualizarParalelo($cod,$codi,$name){
             $resultado = $this->bd->query("UPDATE snp_para set PAR_CODIGO='$codi', PAR_NOMBRE='$name' WHERE PAR_CODIGO =$cod");
             return true;
         }
