@@ -344,7 +344,7 @@
 
                     <div>
                         <label for="">Año anterior: </label>
-                        <input type="text" id="input" name="i_aaa" value="<?php echo $display['']; ?>">
+                        <input type="text" id="input" name="i_aaa" value="<?php echo $display['alum_colant_ao']; ?>">
                     </div>
 
                     <div>
@@ -354,7 +354,7 @@
 
                     <div>
                         <label for="">Año: </label>
-                        <input type="text" id="input" name="ii_aa" value="<?php echo $display['']; ?>">
+                        <input type="text" id="input" name="ii_aa" value="">
                     </div>
 
                     <div>

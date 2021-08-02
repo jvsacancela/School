@@ -20,22 +20,7 @@
     <div id="contenido">
 
     <form action="funciones/insertar_alumnos.php" method="POST">
-<!----
-    <div>
-    <input type="text" name="input_codigo" placeholder="codigo">
-    <input type="text" name="input_matricula" placeholder="matricula">
-    <input type="text" name="input_folio" placeholder="folio">
 
-    <input type="text" name="input_cedula" placeholder="cedula">
-    <input type="text" name="input_numero" placeholder="numero">
-    <input type="text" name="input_apellido" placeholder="apellidos">
-    <input type="text" name="input_nombre" placeholder="nombres">
-    <input type="text" name="input_nacionalidad" placeholder="nacionalidad">
-    <input type="text" name="input_telefono" placeholder="telefono">
-    <input type="text" name="input_colAnt" placeholder="colegio anterior">
-    </div>
-
---->
         <div id="bloque">
             
 
@@ -50,7 +35,7 @@
                 </div>
                 
             </div>
-                <img src="https://scontent.fuio14-1.fna.fbcdn.net/v/t1.18169-9/10924825_1571291193085412_3652568559445422628_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=174925&_nc_eui2=AeGrHcAqU6Q5Kw70UEAb8q2IWJgq6EbIyNNYmCroRsjI0_OCccEAFoflIF6cXtFN7ukY_8cF1mztmPoHwJ6LUYoY&_nc_ohc=FPicfjSBCGEAX-keZ6P&_nc_oc=AQnlcykaoZAdJ71t_DiCd5Vf5w5YYD9a7mttgFXIoGs1cWC9l-9qLT9sAh0fRygeFuI&_nc_ht=scontent.fuio14-1.fna&oh=918208b52fb8720549b8d46e168562ca&oe=60F5C0BD" alt="foto de perfil">
+                <img src="" alt="foto de perfil">
                 <br>
                 <label for="">Numero de matricula: </label>
                 <input type="text" name="" id="input">

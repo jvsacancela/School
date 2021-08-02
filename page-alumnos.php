@@ -76,7 +76,7 @@
                 <?php while($display = $consulta_alumnos->fetch_assoc()){ ?>
                 <tr>
                     <td>
-                        <a href=""><i class="fas fa-info" id="btnInfo"></i></a>
+                       <!-- <a href=""><i class="fas fa-info" id="btnInfo"></i></a> -->
                         <a href="page-edit-alumnos.php?alum_codigo=<?php echo $display['alum_codigo']?>"><i class="fas fa-edit" id="btnEdit"></i></a>
                         <a href="funciones/eliminar_alumnos.php?alum_codigo=<?php echo $display['alum_codigo']?>"><i class="fas fa-trash" id="btnDelete"></i></a>
                     </td>
